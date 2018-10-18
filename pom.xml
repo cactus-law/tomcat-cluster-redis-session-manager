@@ -14,6 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+        <tomcat.version>7.0.70</tomcat.version>
 	</properties>
 
 	<dependencies>
@@ -37,19 +38,19 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-catalina</artifactId>
-            <version>7.0.70</version>
+            <version>${tomcat.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-servlet-api</artifactId>
-            <version>7.0.70</version>
+            <version>${tomcat.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-api -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-api</artifactId>
-            <version>7.0.70</version>
+            <version>${tomcat.version}</version>
         </dependency>
 
         <!-- For local development -->
