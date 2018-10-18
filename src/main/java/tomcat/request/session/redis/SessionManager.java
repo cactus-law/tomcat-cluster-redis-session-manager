@@ -96,7 +96,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void addLifecycleListener(LifecycleListener listener) {
     super.addLifecycleListener(listener);
   }
@@ -104,7 +104,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public LifecycleListener[] findLifecycleListeners() {
     return super.findLifecycleListeners();
   }
@@ -112,7 +112,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void removeLifecycleListener(LifecycleListener listener) {
     super.removeLifecycleListener(listener);
   }
@@ -120,7 +120,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   protected synchronized void startInternal() throws LifecycleException {
     super.startInternal();
     super.setState(LifecycleState.STARTING);
@@ -149,7 +149,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   protected synchronized void stopInternal() throws LifecycleException {
     super.setState(LifecycleState.STOPPING);
     super.stopInternal();
@@ -158,7 +158,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public Session createSession(String sessionId) {
     if (sessionId != null) {
       sessionId =
@@ -195,7 +195,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public Session createEmptySession() {
     return new Session(this);
   }
@@ -203,7 +203,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void add(org.apache.catalina.Session session) {
     save(session, false);
   }
@@ -211,7 +211,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public Session findSession(String sessionId) throws IOException {
     Session session = null;
     if (sessionId != null && this.sessionContext.get() != null && sessionId
@@ -257,7 +257,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void remove(org.apache.catalina.Session session) {
     remove(session, false);
   }
@@ -265,7 +265,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void remove(org.apache.catalina.Session session, boolean update) {
     this.dataCache.expire(session.getId(), 10);
   }
@@ -273,7 +273,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void load() throws ClassNotFoundException, IOException {
     // Auto-generated method stub
   }
@@ -281,7 +281,7 @@ public class SessionManager extends ManagerBase implements Lifecycle {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void unload() throws IOException {
     // Auto-generated method stub
   }

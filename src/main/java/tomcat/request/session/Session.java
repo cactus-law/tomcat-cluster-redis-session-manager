@@ -62,7 +62,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void setId(String id) {
     this.id = id;
   }
@@ -70,7 +70,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void setAttribute(String key, Object value) {
     if (manualDirtyTrackingSupportEnabled && manualDirtyTrackingAttributeKey.equals(key)) {
       this.dirty = true;
@@ -95,7 +95,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public Object getAttribute(String name) {
     return super.getAttribute(name);
   }
@@ -103,7 +103,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public Enumeration<String> getAttributeNames() {
     return super.getAttributeNames();
   }
@@ -111,7 +111,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void removeAttribute(String name) {
     super.removeAttribute(name);
     if (this.manager instanceof SessionManager && ((SessionManager) this.manager)
@@ -125,7 +125,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void setPrincipal(Principal principal) {
     super.setPrincipal(principal);
     this.dirty = true;
@@ -134,7 +134,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void writeObjectData(ObjectOutputStream out) throws IOException {
     super.writeObjectData(out);
     out.writeLong(this.getCreationTime());
@@ -143,7 +143,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void readObjectData(ObjectInputStream in) throws IOException, ClassNotFoundException {
     super.readObjectData(in);
     this.setCreationTime(in.readLong());
@@ -152,7 +152,7 @@ public class Session extends StandardSession {
   /**
    * {@inheritDoc}
    */
-  @Override
+
   public void invalidate() {
     super.invalidate();
   }

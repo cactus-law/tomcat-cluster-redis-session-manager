@@ -47,3 +47,4 @@ more details.. https://github.com/ran-jit/tomcat-cluster-redis-session-manager/w
 
 ### Note:
   * This supports, both redis stand-alone and multiple node cluster based on the redis-data-cache.properties configuration.
+
